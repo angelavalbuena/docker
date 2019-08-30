@@ -1,0 +1,440 @@
+{
+  "id": "c3662f7f-95ce-4b92-af70-a3f3084a11f1",
+  "version": "2.0",
+  "name": "Proyecto Dashboard",
+  "url": "http://localhost:8088",
+  "tests": [{
+    "id": "1b7ddc63-3b82-413a-a05f-43564a96939e",
+    "name": "Crear Proyecto",
+    "commands": [{
+      "id": "7577aad1-f3be-4993-95dc-19d3a88f6cc3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "415baac0-8401-4458-9b30-d3a4a6c115a1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "969x681",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ed4be30-9bb9-4323-9c39-730986d06fcf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=New project",
+      "targets": [
+        ["linkText=New project", "linkText"],
+        ["css=ul:nth-child(1) > li:nth-child(1) > .js-modal-medium", "css:finder"],
+        ["xpath=(//a[contains(text(),'New project')])[2]", "xpath:link"],
+        ["xpath=//section[@id='main']/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/project/create')])[3]", "xpath:href"],
+        ["xpath=//section/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7312e4d-fac2-471f-ad83-4ee1974a9520",
+      "comment": "",
+      "command": "type",
+      "target": "id=form-name",
+      "targets": [
+        ["id=form-name", "id"],
+        ["name=name", "name"],
+        ["css=#form-name", "css:finder"],
+        ["xpath=//input[@id='form-name']", "xpath:attributes"],
+        ["xpath=//form[@id='project-creation-form']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "ProyectoTest12"
+    }, {
+      "id": "5345f834-b0b6-4d85-ba6b-37b4a8517f78",
+      "comment": "",
+      "command": "click",
+      "target": "id=form-identifier",
+      "targets": [
+        ["id=form-identifier", "id"],
+        ["name=identifier", "name"],
+        ["css=#form-identifier", "css:finder"],
+        ["xpath=//input[@id='form-identifier']", "xpath:attributes"],
+        ["xpath=//form[@id='project-creation-form']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec939cd1-3abc-4569-84b2-b719e9be384b",
+      "comment": "",
+      "command": "type",
+      "target": "id=form-identifier",
+      "targets": [
+        ["id=form-identifier", "id"],
+        ["name=identifier", "name"],
+        ["css=#form-identifier", "css:finder"],
+        ["xpath=//input[@id='form-identifier']", "xpath:attributes"],
+        ["xpath=//form[@id='project-creation-form']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "Projecttest12"
+    }, {
+      "id": "68664d28-8b00-4ffe-9c15-8014ebbb4a7c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='project-creation-form']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4785ffa5-cf44-4160-b0fa-313cc5131fb2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//h2[text()='Summary']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6b3940a-5e57-4a02-8ff0-0b9284f218a0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(@href, 'edit')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "df470fff-ee62-4fee-91e1-154b0db55c60",
+    "name": "Crear Board",
+    "commands": [{
+      "id": "e43bc2fe-18de-4013-bc63-0f3c84c48ee4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22b4e304-eaf8-4e25-baeb-611164614fd6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "969x681",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "800c9716-a80b-4b9e-b663-ee78caec336c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My projects",
+      "targets": [
+        ["linkText=My projects", "linkText"],
+        ["css=.sidebar li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'My projects')]", "xpath:link"],
+        ["xpath=//section[@id='dashboard']/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/dashboard/1/projects')]", "xpath:href"],
+        ["xpath=//section/section/section/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'My projects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16186d20-0397-46db-8209-88f771772680",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Proyecto Test",
+      "targets": [
+        ["linkText=Proyecto Test", "linkText"],
+        ["css=.table-list-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Proyecto Test')]", "xpath:link"],
+        ["xpath=//section[@id='dashboard']/div[2]/div[2]/div[2]/div/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/board/1')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Proyecto Test')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0d6b2bb-4988-46a6-952a-d1dcb4ae27a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.board-column-header-1 .board-add-icon .fa",
+      "targets": [
+        ["css=.board-column-header-1 .board-add-icon .fa", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr/th/div[2]/div/a/i", "xpath:idRelative"],
+        ["xpath=//th/div[2]/div/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f0e5f15-38c1-4f6b-999b-8302474d6f54",
+      "comment": "",
+      "command": "click",
+      "target": "id=form-title",
+      "targets": [
+        ["id=form-title", "id"],
+        ["name=title", "name"],
+        ["css=#form-title", "css:finder"],
+        ["xpath=//input[@id='form-title']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-content']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd33d159-2ca0-411e-9a4f-f19751a69de0",
+      "comment": "",
+      "command": "type",
+      "target": "id=form-title",
+      "targets": [
+        ["id=form-title", "id"],
+        ["name=title", "name"],
+        ["css=#form-title", "css:finder"],
+        ["xpath=//input[@id='form-title']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-content']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "Crear tarea 1"
+    }, {
+      "id": "a6e7374c-b1d0-4e85-bddd-88186268f5af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-content']/form/div/div[4]/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f13c6a45-7428-4987-a1df-294b8c713fbe",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-content']/form/div/div[4]/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0b1f217c-9c54-4e67-a799-38eae32929a3",
+    "name": "Mover tablero",
+    "commands": [{
+      "id": "b40656ee-1767-4a73-aa9b-247e857c5ccb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "203416cb-f309-45d7-9814-a560cf9d29ff",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "970x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25b1f16a-d513-4956-99e0-e20eaea16c33",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Proyecto Test",
+      "targets": [
+        ["linkText=Proyecto Test", "linkText"],
+        ["css=.table-list-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Proyecto Test')]", "xpath:link"],
+        ["xpath=//section[@id='dashboard']/div[2]/div[2]/div[2]/div/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/board/1')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Proyecto Test')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad9d6fde-e81a-4345-85cc-192bb8a4bdf5",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.draggable-item-selected .task-board-icons-row:nth-child(2)",
+      "targets": [
+        ["css=.draggable-item-selected .task-board-icons-row:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div/div[2]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "118,11"
+    }, {
+      "id": "d2395c5c-8413-4de7-84f1-9c774b95dcc9",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.draggable-item-selected .task-board-icons-row:nth-child(2)",
+      "targets": [
+        ["css=.draggable-item-selected .task-board-icons-row:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div/div[2]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "118,11"
+    }, {
+      "id": "4cdc5cdb-7f9a-4a81-a75d-3798b90f442f",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.draggable-item-selected .task-board-icons-row:nth-child(2)",
+      "targets": [
+        ["css=.draggable-item-selected .task-board-icons-row:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div/div[2]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "118,11"
+    }, {
+      "id": "ea164b2c-3113-4f92-911b-5865319df48d",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.draggable-item-selected .task-board-icons-row:nth-child(2)",
+      "targets": [
+        ["css=.draggable-item-selected .task-board-icons-row:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td[2]/div/div/div[2]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div/div[2]/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "173,18"
+    }, {
+      "id": "2dd51cf7-537c-4b63-a852-2f86f546ed32",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.draggable-item-selected .task-board-icons-row:nth-child(2)",
+      "targets": [
+        ["css=.draggable-item-selected .task-board-icons-row:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td[2]/div/div/div[2]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div/div[2]/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "173,18"
+    }, {
+      "id": "40200125-8efe-4c93-98e9-6b67b5f0e017",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.draggable-item-selected .task-board-icons-row:nth-child(2)",
+      "targets": [
+        ["css=.draggable-item-selected .task-board-icons-row:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td[2]/div/div/div[2]/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div/div[2]/div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "173,18"
+    }, {
+      "id": "f5c6013b-186d-435d-bd00-1bf86e097bdb",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "linkText=Subir los archivos a git",
+      "targets": [
+        ["linkText=Subir los archivos a git", "linkText"],
+        ["css=.draggable-item-selected .task-board-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Subir los archivos a git')]", "xpath:link"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/project/1/task/2')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Subir los archivos a git')]", "xpath:innerText"]
+      ],
+      "value": "-366,53"
+    }, {
+      "id": "60f00188-d529-4b67-8e17-7e3b5faccc93",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.draggable-item-selected > .task-board-expanded",
+      "targets": [
+        ["css=.draggable-item-selected > .task-board-expanded", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "94,36"
+    }, {
+      "id": "6389014d-fcb0-4c6c-8417-7b919ee9af75",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.draggable-item-selected > .task-board-expanded",
+      "targets": [
+        ["css=.draggable-item-selected > .task-board-expanded", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "94,36"
+    }, {
+      "id": "6601128a-e5d5-4c3e-bc93-2fa22ac61503",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Subir los archivos a git",
+      "targets": [
+        ["linkText=Subir los archivos a git", "linkText"],
+        ["css=.draggable-item-selected .task-board-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Subir los archivos a git')]", "xpath:link"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/project/1/task/2')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Subir los archivos a git')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00d6ff7d-4b82-409f-9fe3-924a6fb72bff",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Subir los archivos a git",
+      "targets": [
+        ["linkText=Subir los archivos a git", "linkText"],
+        ["css=.task-board-saving-state .task-board-title > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Subir los archivos a git')]", "xpath:link"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td[2]/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/project/1/task/2')]", "xpath:href"],
+        ["xpath=//td[2]/div/div/div[2]/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Subir los archivos a git')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c8b430f-2c90-45a8-bd07-e855eb35d446",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=.draggable-item-selected > .task-board-expanded",
+      "targets": [
+        ["css=.draggable-item-selected > .task-board-expanded", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "191,38"
+    }, {
+      "id": "ef2235c3-b7ff-47c5-919c-67f7d133ceec",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=.draggable-item-selected > .task-board-expanded",
+      "targets": [
+        ["css=.draggable-item-selected > .task-board-expanded", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "191,38"
+    }, {
+      "id": "51936900-e9ac-4015-8f14-1952ccf9983c",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=.draggable-item-selected > .task-board-expanded",
+      "targets": [
+        ["css=.draggable-item-selected > .task-board-expanded", "css:finder"],
+        ["xpath=//table[@id='board']/tbody/tr[2]/td/div/div[3]/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "191,38"
+    }, {
+      "id": "d65bc120-93c9-44c2-9153-2511a631ae71",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "95f10d92-b45b-4cd3-8e34-82ce7aed8930",
+    "name": "KB",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1b7ddc63-3b82-413a-a05f-43564a96939e"]
+  }],
+  "urls": ["http://localhost:8088/"],
+  "plugins": []
+}
